@@ -3,8 +3,8 @@
   "description": "A test of React-markdown with Webpack 5",
   "author": "ashley@codecapers.com.au",
   "scripts": {
-    "start": "webpack serve --open browser.html --config webpack.browser.config.js",
-    "build-browser": "webpack --config webpack.browser.config.js"
+    "start": "webpack serve --open browser.html --config webpack.config.js",
+    "build-browser": "webpack --config webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",

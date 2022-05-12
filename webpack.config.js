@@ -4,13 +4,13 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require("path");
 
-module.exports = function (env) {
+module.exports = function () {
 
-    const outputDir = path.resolve(__dirname, "dist", env);
+    const outputDir = path.resolve(__dirname, "dist", "browser");
 
     return {
         entry: {
-            'index': `./src/testbed/${env}.tsx`,
+            'index': `./src/testbed/browser.tsx`,
         },
         output: {
             globalObject: 'self',
@@ -78,7 +78,7 @@ module.exports = function (env) {
     
             new webpack.EnvironmentPlugin({
                 // Configure environment variables here.
-                ENVIRONMENT: env,
+                ENVIRONMENT: "browser",
             }),
     
             new ForkTsCheckerWebpackPlugin(),
@@ -87,7 +87,7 @@ module.exports = function (env) {
             new CopyWebpackPlugin({
                 patterns: [
                     {
-                        from: `./src/testbed/${env}.html`,
+                        from: `./src/testbed/browser.html`,
                         to: outputDir,
                     },
                 ],
