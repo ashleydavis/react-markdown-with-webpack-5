@@ -1,0 +1,33 @@
+{
+  "name": "react-markdown-with-webpack-5",
+  "description": "A test of React-markdown with Webpack 5",
+  "author": "ashley@codecapers.com.au",
+  "scripts": {
+    "start": "webpack serve --open browser.html --config webpack.browser.config.js",
+    "build-browser": "webpack --config webpack.browser.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.13",
+    "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "fork-ts-checker-notifier-webpack-plugin": "^6.0.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.1",
+    "source-map-loader": "^3.0.1",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.7",
+    "typescript": "^4.6.2",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "path-browserify": "^1.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-markdown": "8.0.3"
+  }
+}
