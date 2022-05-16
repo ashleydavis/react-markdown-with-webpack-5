@@ -35,11 +35,6 @@ module.exports = function () {
         resolve: {
             // Add '.ts' and '.tsx' as resolvable extensions.
             extensions: [".ts", ".tsx", ".js", ".json"],
-
-            fallback: {
-                // Allows the path Node.js module to be used in Weback bundled code.
-                "path": require.resolve("path-browserify"),
-            },
         },
     
         module: {
@@ -66,15 +61,6 @@ module.exports = function () {
         },
     
         plugins: [
-            
-            // For React-markdown + Web pack 5
-            // https://github.com/remarkjs/remark/discussions/903
-            // https://stackoverflow.com/a/64553486/25868
-            // https://github.com/remarkjs/react-markdown/issues/652
-            // https://stackoverflow.com/a/65018686/25868
-            new webpack.ProvidePlugin({
-                process: 'process/browser',
-            }),
     
             new webpack.EnvironmentPlugin({
                 // Configure environment variables here.

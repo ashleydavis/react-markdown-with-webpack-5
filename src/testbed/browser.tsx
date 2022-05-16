@@ -1,11 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-const ReactMarkdown = require('react-markdown');
+import ReactMarkdown from 'react-markdown';
 
 function App() {
     return (
         <div>
-            <ReactMarkdown />
+            <ReactMarkdown># Hello, *world*!</ReactMarkdown>
         </div>
     );
 }
